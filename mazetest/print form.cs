@@ -61,7 +61,7 @@ namespace mazetest
 			if (bpath)
 			{
 				e.Graphics.FillRectangle(new SolidBrush(Color.Gold), 20, locationy + space * 4 + 10, space, space);
-				e.Graphics.DrawString("this is the piece where you have being", Font, new SolidBrush(Color.Black), 20 + space, locationx + space * 4 + 10);
+				e.Graphics.DrawString("this is part of the shortest path", Font, new SolidBrush(Color.Black), 20 + space, locationx + space * 4 + 10);
 			}
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
