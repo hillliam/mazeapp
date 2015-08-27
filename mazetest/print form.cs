@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 using System.Drawing.Printing;
 
 namespace mazetest
@@ -51,18 +50,18 @@ namespace mazetest
                 locationx += space;
             }
             e.Graphics.FillRectangle(new SolidBrush(Color.Blue), 20, locationy + space + 10, space, space);
-            e.Graphics.DrawString("this is the pice the player starts at", Font, new SolidBrush(Color.Black), 20 + space, locationx + space + 10);
-            e.Graphics.FillRectangle(new SolidBrush(Color.Green), 20, locationy + space + space + 10, space, space);
-            e.Graphics.DrawString("this is the pice you have to reatch", Font, new SolidBrush(Color.Black), 20 + space, locationx + space + space + 10);
+            e.Graphics.DrawString("this is the piece the player starts at", Font, new SolidBrush(Color.Black), 20 + space, locationx + space + 10);
+            e.Graphics.FillRectangle(new SolidBrush(Color.Green), 20, locationy + space * 2 + 10, space, space);
+            e.Graphics.DrawString("this is the piece you have to reach", Font, new SolidBrush(Color.Black), 20 + space, locationx + space * 2 + 10);
             if (spath)
             {
-                e.Graphics.FillRectangle(new SolidBrush(Color.Red), 20, locationy + space + space + space + 10, space, space);
-                e.Graphics.DrawString("this is the pice where you have being", Font, new SolidBrush(Color.Black), 20 + space, locationx + space + space + space + 10);
+                e.Graphics.FillRectangle(new SolidBrush(Color.Red), 20, locationy + space * 3 + 10, space, space);
+                e.Graphics.DrawString("this is the piece where you have being", Font, new SolidBrush(Color.Black), 20 + space, locationx + space * 3 + 10);
             }
 			if (bpath)
 			{
-				e.Graphics.FillRectangle(new SolidBrush(Color.Gold), 20, locationy + space + space + space + space + 10, space, space);
-				e.Graphics.DrawString("this is the pice where you have being", Font, new SolidBrush(Color.Black), 20 + space, locationx + space + space + space + 10);
+				e.Graphics.FillRectangle(new SolidBrush(Color.Gold), 20, locationy + space * 4 + 10, space, space);
+				e.Graphics.DrawString("this is the piece where you have being", Font, new SolidBrush(Color.Black), 20 + space, locationx + space * 4 + 10);
 			}
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -72,7 +71,7 @@ namespace mazetest
                 this.space = int.Parse(textBox1.Text);
                 this.printPreviewControl1.Document = printDocument1;
             }
-            catch (Exception exsemption)
+            catch (Exception exception)
             { 
                 
             }
@@ -84,7 +83,7 @@ namespace mazetest
                 this.linethicness = int.Parse(textBox2.Text);
                 this.printPreviewControl1.Document = printDocument1;
             }
-            catch (Exception exsemption)
+            catch (Exception exception)
             {
 
             }

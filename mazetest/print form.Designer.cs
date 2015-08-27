@@ -37,13 +37,14 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // printPreviewControl1
             // 
             this.printPreviewControl1.Location = new System.Drawing.Point(12, 51);
             this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(440, 330);
+            this.printPreviewControl1.Size = new System.Drawing.Size(540, 352);
             this.printPreviewControl1.TabIndex = 0;
             this.printPreviewControl1.UseAntiAlias = true;
             // 
@@ -77,9 +78,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(110, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "pice size";
+            this.label2.Text = "piece size";
             // 
             // button1
             // 
@@ -108,32 +109,32 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(459, 16);
+            this.checkBox1.Location = new System.Drawing.Point(459, 25);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(75, 17);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "show path";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-			// 
-			// checkBox2
-			// 
-			this.checkBox2.AutoSize = true;
-			this.checkBox2.Location = new System.Drawing.Point(459, 10);
-			this.checkBox2.Name = "checkBox1";
-			this.checkBox2.Size = new System.Drawing.Size(75, 17);
-			this.checkBox2.TabIndex = 8;
-			this.checkBox2.Text = "show best path";
-			this.checkBox2.UseVisualStyleBackColor = true;
-			this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(459, 10);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(98, 17);
+            this.checkBox2.TabIndex = 8;
+            this.checkBox2.Text = "show best path";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // print_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 415);
+            this.ClientSize = new System.Drawing.Size(564, 415);
             this.Controls.Add(this.checkBox1);
-			this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
