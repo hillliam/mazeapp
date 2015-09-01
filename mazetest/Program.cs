@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿// Copyright © Liam hill 2013
+using System;
 using System.Windows.Forms;
 
 namespace mazetest
