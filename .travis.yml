@@ -1,0 +1,5 @@
+language: csharp
+solution: mazetest.sln
+
+notifications:
+  email: true
