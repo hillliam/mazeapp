@@ -1,4 +1,9 @@
 # mazeapp
+[![Build Status](https://travis-ci.org/hillliam/mazeapp.svg?branch=master)](https://travis-ci.org/hillliam/mazeapp)
+<a href="https://scan.coverity.com/projects/hillliam-mazeapp">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/6348/badge.svg"/>
+</a>
 
 Liam Hill
 ---------
