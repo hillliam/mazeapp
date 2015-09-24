@@ -10,8 +10,8 @@ namespace mazetest
     {
         public static int mazesize = 30;
         public maze[,] map = new maze[mazesize, mazesize];// fixed map size
-        private int selectedpicex;
-        private int selectedpicey;
+        private int selectedpiecex;
+        private int selectedpiecey;
         public int space = 15;
         public bool pathfind = false;
         public create()
@@ -104,7 +104,7 @@ namespace mazetest
                 {
                     for (int j = 0; j < mazesize; j++)
                     {
-                        map[i, j].type = (maze_pices) Enum.Parse(typeof(maze_pices),b.ReadLine());
+                        map[i, j].type = (maze_piece) Enum.Parse(typeof(maze_piecr),b.ReadLine());
                         map[i, j].player_is_on = bool.Parse(b.ReadLine());
                         map[i, j].end_point = bool.Parse(b.ReadLine());
                     }
@@ -154,8 +154,8 @@ namespace mazetest
                     {
                         if (map[i, j] == a)
                         {
-                            selectedpicex = i;
-                            selectedpicey = j;
+                            selectedpiecex = i;
+                            selectedpiecey = j;
                         }
 
                     }
@@ -176,7 +176,7 @@ namespace mazetest
                     map[i, j].player_is_on = false;
                 }
             }
-            map[selectedpicex, selectedpicey].player_is_on = true;
+            map[selectedpiecex, selectedpiecey].player_is_on = true;
             showbestpath();
         }
         private void setEndPositionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -189,10 +189,10 @@ namespace mazetest
 
                 }
             }
-            map[selectedpicex, selectedpicey].end_point = true;
+            map[selectedpiecex, selectedpiecey].end_point = true;
             showbestpath();
         }
-        private void changepice(object sender, EventArgs e)
+        private void changepiece(object sender, EventArgs e)
         {
             if (sender != null)
             {
@@ -200,35 +200,35 @@ namespace mazetest
                 a = (ToolStripMenuItem)sender;
                 switch (a.Text)
                 {
-                    case "set vertical pice":
-                        map[selectedpicex, selectedpicey].type = maze_pices.north;
+                    case "set vertical piece":
+                        map[selectedpiecex, selectedpiecey].type = maze_piece.north;
                         break;
-                    case "set horizontal pice":
-                        map[selectedpicex, selectedpicey].type = maze_pices.east;
+                    case "set horizontal piece":
+                        map[selectedpiecex, selectedpicey].type = maze_piece.east;
                         break;
-                    case "set blank pice":
-                        map[selectedpicex, selectedpicey].type = maze_pices.all;
+                    case "set blank piece":
+                        map[selectedpiecex, selectedpiecey].type = maze_piece.all;
                         break;
-                    case "set u t pice":
-                        map[selectedpicex, selectedpicey].type = maze_pices.eastwastnorth;
+                    case "set u t piece":
+                        map[selectedpiecex, selectedpiecey].type = maze_piece.eastwastnorth;
                         break;
-                    case "set t pice":
-                        map[selectedpicex, selectedpicey].type = maze_pices.eastwestsouth;
+                    case "set t piece":
+                        map[selectedpiecex, selectedpiecey].type = maze_piece.eastwestsouth;
                         break;
-                    case "set noenterable pice":
-                        map[selectedpicex, selectedpicey].type = maze_pices.noenterable;
+                    case "set noenterable piece":
+                        map[selectedpiecex, selectedpiecey].type = maze_piece.noenterable;
                         break;
-                    case "set northwest pice":
-                        map[selectedpicex, selectedpicey].type = maze_pices.northwest;
+                    case "set northwest piece":
+                        map[selectedpiecex, selectedpiecey].type = maze_piece.northwest;
                         break;
-                    case "set northeast pice":
-                        map[selectedpicex, selectedpicey].type = maze_pices.northeast;
+                    case "set northeast piece":
+                        map[selectedpiecex, selectedpiecey].type = maze_piece.northeast;
                         break;
-                    case "set southwest pice":
-                        map[selectedpicex, selectedpicey].type = maze_pices.southwest;
+                    case "set southwest piece":
+                        map[selectedpiecex, selectedpiecey].type = maze_piece.southwest;
                         break;
-                    case "set southeast pice":
-                        map[selectedpicex, selectedpicey].type = maze_pices.southeast;
+                    case "set southeast piece":
+                        map[selectedpiecex, selectedpiecey].type = maze_piece.southeast;
                         break;
 
                 }
@@ -394,20 +394,20 @@ namespace mazetest
             }
             switch (map[startx, starty].type)
             {
-                case maze_pices.all:
-                case maze_pices.north:
-                case maze_pices.eastwastnorth:
-                case maze_pices.southeast:
-                case maze_pices.southwest:
+                case maze_piece.all:
+                case maze_piece.north:
+                case maze_piece.eastwastnorth:
+                case maze_piece.southeast:
+                case maze_piece.southwest:
                     if (tox == startx && toy == starty - 1)
                     {
                         switch (map[tox, toy].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.north:
-                            case maze_pices.eastwestsouth:
-                            case maze_pices.northeast:
-                            case maze_pices.northwest:
+                            case maze_piece.all:
+                            case maze_piece.north:
+                            case maze_piece.eastwestsouth:
+                            case maze_piece.northeast:
+                            case maze_piece.northwest:
                                 return true;
                         }
                     }
@@ -415,22 +415,22 @@ namespace mazetest
             }
             switch (map[startx, starty].type)
             {
-                case maze_pices.all:
-                case maze_pices.east:
-                case maze_pices.eastwestsouth:
-                case maze_pices.eastwastnorth:
-                case maze_pices.northwest:
-                case maze_pices.southwest:
+                case maze_piece.all:
+                case maze_piece.east:
+                case maze_piece.eastwestsouth:
+                case maze_piece.eastwastnorth:
+                case maze_piece.northwest:
+                case maze_piece.southwest:
                     if (tox == startx - 1 && toy == starty)
                     {
                         switch (map[tox, toy].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.east:
-                            case maze_pices.eastwastnorth:
-                            case maze_pices.eastwestsouth:
-                            case maze_pices.southeast:
-                            case maze_pices.northeast:
+                            case maze_piece.all:
+                            case maze_piece.east:
+                            case maze_piece.eastwastnorth:
+                            case maze_piece.eastwestsouth:
+                            case maze_piece.southeast:
+                            case maze_piece.northeast:
                                 return true;
                         }
                     }
@@ -438,20 +438,20 @@ namespace mazetest
             }
             switch (map[startx, starty].type)
             {
-                case maze_pices.all:
-                case maze_pices.north:
-                case maze_pices.eastwestsouth:
-                case maze_pices.northeast:
-                case maze_pices.northwest:
+                case maze_piece.all:
+                case maze_piece.north:
+                case maze_piece.eastwestsouth:
+                case maze_piece.northeast:
+                case maze_piece.northwest:
                     if (tox == startx && toy == starty + 1)
                     {
                         switch (map[tox, toy].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.north:
-                            case maze_pices.eastwastnorth:
-                            case maze_pices.southeast:
-                            case maze_pices.southwest:
+                            case maze_piece.all:
+                            case maze_piece.north:
+                            case maze_piece.eastwastnorth:
+                            case maze_piece.southeast:
+                            case maze_piece.southwest:
                                 return true;
                         }
                     }
@@ -459,22 +459,22 @@ namespace mazetest
             }
             switch (map[startx, starty].type)
             {
-                case maze_pices.all:
-                case maze_pices.east:
-                case maze_pices.eastwestsouth:
-                case maze_pices.eastwastnorth:
-                case maze_pices.northeast:
-                case maze_pices.southeast:
+                case maze_piece.all:
+                case maze_piece.east:
+                case maze_piece.eastwestsouth:
+                case maze_piece.eastwastnorth:
+                case maze_piece.northeast:
+                case maze_piece.southeast:
                     if (tox == startx + 1 && toy == starty)
                     {
                         switch (map[tox, toy].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.east:
-                            case maze_pices.eastwastnorth:
-                            case maze_pices.eastwestsouth:
-                            case maze_pices.northwest:
-                            case maze_pices.southwest:
+                            case maze_piece.all:
+                            case maze_piece.east:
+                            case maze_piece.eastwastnorth:
+                            case maze_piece.eastwestsouth:
+                            case maze_piece.northwest:
+                            case maze_piece.southwest:
                                 return true;
                         }
                     }
@@ -555,7 +555,7 @@ namespace mazetest
             {
                 for (int j = 0; j < mazesize; j++)
                 {
-                    map[i, j].type = (maze_pices)a.Next(0, 10);
+                    map[i, j].type = (maze_piece)a.Next(0, 10);
                 }
             }
         }
@@ -568,7 +568,7 @@ namespace mazetest
                 {
                     if (map[i, j].distance == 10000)
                     {
-                        map[i, j].type = (maze_pices)a.Next(1, 10);
+                        map[i, j].type = (maze_piece)a.Next(1, 10);
                     }
                 }
             }
