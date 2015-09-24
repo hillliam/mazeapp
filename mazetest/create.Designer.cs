@@ -37,15 +37,15 @@
             this.setPlayerPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setEndPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setHorizontalPiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setVerticalPiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setBlankPiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setTPiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setUTPiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setVerticalPieceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setBlankPieceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setTPieceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setUTPieceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setNoenterableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setNorthwestPiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setNortheastPiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setSouthwestPiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setSoutheastPiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setNorthwestPieceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setNortheastPieceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setSouthwestPieceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setSoutheastPieceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -97,16 +97,16 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setPlayerPositionToolStripMenuItem,
             this.setEndPositionToolStripMenuItem,
-            this.setHorizontalPiceToolStripMenuItem,
-            this.setVerticalPiceToolStripMenuItem,
-            this.setBlankPiceToolStripMenuItem,
-            this.setTPiceToolStripMenuItem,
-            this.setUTPiceToolStripMenuItem,
+            this.setHorizontalPieceToolStripMenuItem,
+            this.setVerticalPieceToolStripMenuItem,
+            this.setBlankPieceToolStripMenuItem,
+            this.setTPieceToolStripMenuItem,
+            this.setUTPieceToolStripMenuItem,
             this.setNoenterableToolStripMenuItem,
-            this.setNorthwestPiceToolStripMenuItem,
-            this.setNortheastPiceToolStripMenuItem,
-            this.setSouthwestPiceToolStripMenuItem,
-            this.setSoutheastPiceToolStripMenuItem});
+            this.setNorthwestPieceToolStripMenuItem,
+            this.setNortheastPieceToolStripMenuItem,
+            this.setSouthwestPieceToolStripMenuItem,
+            this.setSoutheastPieceToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(181, 268);
             // 
@@ -124,75 +124,75 @@
             this.setEndPositionToolStripMenuItem.Text = "set end position";
             this.setEndPositionToolStripMenuItem.Click += new System.EventHandler(this.setEndPositionToolStripMenuItem_Click);
             // 
-            // setHorizontalPiceToolStripMenuItem
+            // setHorizontalPieceToolStripMenuItem
             // 
-            this.setHorizontalPiceToolStripMenuItem.Name = "setHorizontalPiceToolStripMenuItem";
-            this.setHorizontalPiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setHorizontalPiceToolStripMenuItem.Text = "set horizontal pice";
-            this.setHorizontalPiceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
+            this.setHorizontalPieceToolStripMenuItem.Name = "setHorizontalPieceToolStripMenuItem";
+            this.setHorizontalPieceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setHorizontalPieceToolStripMenuItem.Text = "set horizontal piece";
+            this.setHorizontalPieceToolStripMenuItem.Click += new System.EventHandler(this.changepiece);
             // 
-            // setVerticalPiceToolStripMenuItem
+            // setVerticalPieceToolStripMenuItem
             // 
-            this.setVerticalPiceToolStripMenuItem.Name = "setVerticalPiceToolStripMenuItem";
-            this.setVerticalPiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setVerticalPiceToolStripMenuItem.Text = "set vertical pice";
-            this.setVerticalPiceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
+            this.setVerticalPieceToolStripMenuItem.Name = "setVerticalPieceToolStripMenuItem";
+            this.setVerticalPieceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setVerticalPieceToolStripMenuItem.Text = "set vertical piece";
+            this.setVerticalPieceToolStripMenuItem.Click += new System.EventHandler(this.changepiece);
             // 
-            // setBlankPiceToolStripMenuItem
+            // setBlankPieceToolStripMenuItem
             // 
-            this.setBlankPiceToolStripMenuItem.Name = "setBlankPiceToolStripMenuItem";
-            this.setBlankPiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setBlankPiceToolStripMenuItem.Text = "set blank pice";
-            this.setBlankPiceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
+            this.setBlankPieceToolStripMenuItem.Name = "setBlankPieceToolStripMenuItem";
+            this.setBlankPieceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setBlankPieceToolStripMenuItem.Text = "set blank piece";
+            this.setBlankPieceToolStripMenuItem.Click += new System.EventHandler(this.changepiece);
             // 
-            // setTPiceToolStripMenuItem
+            // setTPieceToolStripMenuItem
             // 
-            this.setTPiceToolStripMenuItem.Name = "setTPiceToolStripMenuItem";
-            this.setTPiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setTPiceToolStripMenuItem.Text = "set u t pice";
-            this.setTPiceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
+            this.setTPieceToolStripMenuItem.Name = "setTPieceToolStripMenuItem";
+            this.setTPieceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setTPieceToolStripMenuItem.Text = "set u t pice";
+            this.setTPieceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
             // 
-            // setUTPiceToolStripMenuItem
+            // setUTPieceToolStripMenuItem
             // 
-            this.setUTPiceToolStripMenuItem.Name = "setUTPiceToolStripMenuItem";
-            this.setUTPiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setUTPiceToolStripMenuItem.Text = "set t pice";
-            this.setUTPiceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
+            this.setUTPieceToolStripMenuItem.Name = "setUTPieceToolStripMenuItem";
+            this.setUTPieceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setUTPieceToolStripMenuItem.Text = "set t piece";
+            this.setUTPieceToolStripMenuItem.Click += new System.EventHandler(this.changepiece);
             // 
             // setNoenterableToolStripMenuItem
             // 
             this.setNoenterableToolStripMenuItem.Name = "setNoenterableToolStripMenuItem";
             this.setNoenterableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setNoenterableToolStripMenuItem.Text = "set noenterable pice";
-            this.setNoenterableToolStripMenuItem.Click += new System.EventHandler(this.changepice);
+            this.setNoenterableToolStripMenuItem.Text = "set noenterable piece";
+            this.setNoenterableToolStripMenuItem.Click += new System.EventHandler(this.changepiece);
             // 
-            // setNorthwestPiceToolStripMenuItem
+            // setNorthwestPieceToolStripMenuItem
             // 
-            this.setNorthwestPiceToolStripMenuItem.Name = "setNorthwestPiceToolStripMenuItem";
-            this.setNorthwestPiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setNorthwestPiceToolStripMenuItem.Text = "set northwest pice";
-            this.setNorthwestPiceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
+            this.setNorthwestPieceToolStripMenuItem.Name = "setNorthwestPieceToolStripMenuItem";
+            this.setNorthwestPieceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setNorthwestPieceToolStripMenuItem.Text = "set northwest piece";
+            this.setNorthwestPieceToolStripMenuItem.Click += new System.EventHandler(this.changepiece);
             // 
-            // setNortheastPiceToolStripMenuItem
+            // setNortheastPieceToolStripMenuItem
             // 
-            this.setNortheastPiceToolStripMenuItem.Name = "setNortheastPiceToolStripMenuItem";
-            this.setNortheastPiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setNortheastPiceToolStripMenuItem.Text = "set northeast pice";
-            this.setNortheastPiceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
+            this.setNortheastPieceToolStripMenuItem.Name = "setNortheastPieceToolStripMenuItem";
+            this.setNortheastPieceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setNortheastPieceToolStripMenuItem.Text = "set northeast piece";
+            this.setNortheastPieceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
             // 
-            // setSouthwestPiceToolStripMenuItem
+            // setSouthwestPieceToolStripMenuItem
             // 
-            this.setSouthwestPiceToolStripMenuItem.Name = "setSouthwestPiceToolStripMenuItem";
-            this.setSouthwestPiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setSouthwestPiceToolStripMenuItem.Text = "set southwest pice";
-            this.setSouthwestPiceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
+            this.setSouthwestPieceToolStripMenuItem.Name = "setSouthwestPieceToolStripMenuItem";
+            this.setSouthwestPieceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setSouthwestPieceToolStripMenuItem.Text = "set southwest piece";
+            this.setSouthwestPieceToolStripMenuItem.Click += new System.EventHandler(this.changepiece);
             // 
-            // setSoutheastPiceToolStripMenuItem
+            // setSoutheastPieceToolStripMenuItem
             // 
-            this.setSoutheastPiceToolStripMenuItem.Name = "setSoutheastPiceToolStripMenuItem";
-            this.setSoutheastPiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setSoutheastPiceToolStripMenuItem.Text = "set southeast pice";
-            this.setSoutheastPiceToolStripMenuItem.Click += new System.EventHandler(this.changepice);
+            this.setSoutheastPieceToolStripMenuItem.Name = "setSoutheastPiceToolStripMenuItem";
+            this.setSoutheastPieceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setSoutheastPieceToolStripMenuItem.Text = "set southeast piece";
+            this.setSoutheastPieceToolStripMenuItem.Click += new System.EventHandler(this.changepiece);
             // 
             // checkBox1
             // 
@@ -254,16 +254,16 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem setPlayerPositionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setEndPositionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setHorizontalPiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setVerticalPiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setBlankPiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setTPiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setUTPiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setHorizontalPieceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setVerticalPieceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setBlankPieceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setTPieceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setUTPieceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setNoenterableToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setNorthwestPiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setNortheastPiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setSouthwestPiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setSoutheastPiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setNorthwestPieceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setNortheastPieceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setSouthwestPieceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setSoutheastPieceToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
