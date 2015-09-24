@@ -51,9 +51,9 @@ namespace mazetest
             }
         }
         public int noticesize = 15; // make the end position and where the player is more noticible.
-        public int normalsize = 10; // the normal size of the pice
-        private GraphicsPath mazepice = null;
-        private maze_pices piecetype = maze_pices.all;
+        public int normalsize = 10; // the normal size of the piece
+        private GraphicsPath mazepiece = null;
+        private maze_piece piecetype = maze_piece.all;
         private bool hasbeing = false;
         public bool has_being
         {
@@ -81,7 +81,7 @@ namespace mazetest
                 this.Invalidate();
             }
         }
-        public maze_pices type
+        public maze_piece type
         {
             get
             {
@@ -160,55 +160,55 @@ namespace mazetest
                 {
                     switch (piecetype)
                     {
-                        case maze_pices.all:
+                        case maze_piece.all:
                             break;
-                        case maze_pices.east:
+                        case maze_piece.east:
                             Rectangle a = new Rectangle(new Point(0, 0), new Size(15, 4));
                             Rectangle b = new Rectangle(new Point(0, 11), new Size(15, 4));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), a);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), b);
                             break;
-                        case maze_pices.eastwastnorth:
+                        case maze_piece.eastwastnorth:
                             Rectangle f = new Rectangle(new Point(0, 11), new Size(15, 4));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), f);
                             break;
-                        case maze_pices.eastwestsouth:
+                        case maze_piece.eastwestsouth:
                             Rectangle g = new Rectangle(new Point(0, 0), new Size(15, 4));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), g);
                             break;
-                        case maze_pices.north:
+                        case maze_piece.north:
                             Rectangle c = new Rectangle(new Point(0, 0), new Size(4, 15));
                             Rectangle d = new Rectangle(new Point(11, 0), new Size(4, 15));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), c);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), d);
                             break;
-                        case maze_pices.northeast:
+                        case maze_piece.northeast:
                             Rectangle h = new Rectangle(new Point(0, 0), new Size(4, 15));
                             Rectangle i = new Rectangle(new Point(0, 0), new Size(15, 4));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), h);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), i);
                             break;
-                        case maze_pices.northwest:
+                        case maze_piece.northwest:
                             Rectangle j = new Rectangle(new Point(11, 0), new Size(4, 15));
                             Rectangle k = new Rectangle(new Point(0, 0), new Size(15, 4));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), j);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), k);
                             break;
-                        case maze_pices.southeast:
+                        case maze_piece.southeast:
                             Rectangle l = new Rectangle(new Point(0, 11), new Size(15, 4));
                             Rectangle m = new Rectangle(new Point(0, 0), new Size(4, 15));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), l);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), m);
                             break;
-                        case maze_pices.southwest:
+                        case maze_piece.southwest:
                             Rectangle n = new Rectangle(new Point(0, 11), new Size(15, 4));
                             Rectangle o = new Rectangle(new Point(11, 0), new Size(4, 15));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), n);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), o);
                             break;
-                        case maze_pices.noenterable:
+                        case maze_piece.noenterable:
                             MessageBox.Show("this pice cannot be used with the player start or end position", "please use a diffrent maze pice", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                            this.piecetype = maze_pices.all;
+                            this.piecetype = maze_piece.all;
                             break;
                     }
                 }
@@ -218,53 +218,53 @@ namespace mazetest
                     this.Size = new Size(normalsize, normalsize);
                     switch (piecetype)
                     {
-                        case maze_pices.all:
+                        case maze_piece.all:
                             break;
-                        case maze_pices.east:
+                        case maze_piece.east:
                             Rectangle a = new Rectangle(new Point(0, 0), new Size(10, 3));
                             Rectangle b = new Rectangle(new Point(0, 7), new Size(10, 3));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), a);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), b);
                             break;
-                        case maze_pices.eastwastnorth:
+                        case maze_piece.eastwastnorth:
                             Rectangle f = new Rectangle(new Point(0, 7), new Size(10, 3));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), f);
                             break;
-                        case maze_pices.eastwestsouth:
+                        case maze_piece.eastwestsouth:
                             Rectangle g = new Rectangle(new Point(0, 0), new Size(10, 3));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), g);
                             break;
-                        case maze_pices.north:
+                        case maze_piece.north:
                             Rectangle c = new Rectangle(new Point(0, 0), new Size(3, 10));
                             Rectangle d = new Rectangle(new Point(7, 0), new Size(3, 10));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), c);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), d);
                             break;
-                        case maze_pices.northeast:
+                        case maze_piece.northeast:
                             Rectangle h = new Rectangle(new Point(0, 0), new Size(3, 10));
                             Rectangle i = new Rectangle(new Point(0, 0), new Size(10, 3));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), h);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), i);
                             break;
-                        case maze_pices.northwest:
+                        case maze_piece.northwest:
                             Rectangle j = new Rectangle(new Point(0, 0), new Size(10, 3));
                             Rectangle k = new Rectangle(new Point(7, 0), new Size(3, 10));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), j);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), k);
                             break;
-                        case maze_pices.southeast:
+                        case maze_piece.southeast:
                             Rectangle l = new Rectangle(new Point(0, 7), new Size(10, 3));
                             Rectangle m = new Rectangle(new Point(0, 0), new Size(3, 10));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), l);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), m);
                             break;
-                        case maze_pices.southwest:
+                        case maze_piece.southwest:
                             Rectangle n = new Rectangle(new Point(0, 7), new Size(10, 3));
                             Rectangle o = new Rectangle(new Point(7, 0), new Size(3, 10));
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), n);
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black), o);
                             break;
-                        case maze_pices.noenterable:
+                        case maze_piece.noenterable:
                             e.Graphics.FillRectangle(new SolidBrush(Color.Black),this.ClientRectangle);
                             /*Rectangle p = new Rectangle(new Point(0, 0), new Size(3, 10));
                             Rectangle q = new Rectangle(new Point(7, 0), new Size(3, 10));
@@ -281,7 +281,7 @@ namespace mazetest
         }
         public void print(int x, int y,int size, int linethicness, bool spath,bool bpath, PrintPageEventArgs e)
         {
-            if (mazepice != null)
+            if (mazepiece != null)
             {
                 e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                 if (playerison)
@@ -321,53 +321,53 @@ namespace mazetest
                 }
                 switch (piecetype)
                 {
-                    case maze_pices.all:
+                    case maze_piece.all:
                         break;
-                    case maze_pices.east:
+                    case maze_piece.east:
                         Rectangle a = new Rectangle(new Point(x + 0, y + 0), new Size(size, linethicness));
                         Rectangle b = new Rectangle(new Point(x + 0, y + size - linethicness), new Size(size, linethicness));
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), a);
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), b);
                         break;
-                    case maze_pices.eastwastnorth:
+                    case maze_piece.eastwastnorth:
                         Rectangle f = new Rectangle(new Point(x + 0, y + size - linethicness), new Size(size, linethicness));
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), f);
                         break;
-                    case maze_pices.eastwestsouth:
+                    case maze_piece.eastwestsouth:
                         Rectangle g = new Rectangle(new Point(x + 0, y + 0), new Size(size, linethicness));
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), g);
                         break;
-                    case maze_pices.north:
+                    case maze_piece.north:
                         Rectangle c = new Rectangle(new Point(x + 0, y + 0), new Size(linethicness, size));
                         Rectangle d = new Rectangle(new Point(x + size - linethicness, y + 0), new Size(linethicness, size));
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), c);
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), d);
                         break;
-                    case maze_pices.northeast:
+                    case maze_piece.northeast:
                         Rectangle h = new Rectangle(new Point(x + 0, y + 0), new Size(linethicness, size));
                         Rectangle i = new Rectangle(new Point(x + 0, y + 0), new Size(size, linethicness));
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), h);
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), i);
                         break;
-                    case maze_pices.northwest:
+                    case maze_piece.northwest:
                         Rectangle j = new Rectangle(new Point(x + size - linethicness, y + 0), new Size(linethicness, size));
                         Rectangle k = new Rectangle(new Point(x + 0, y + 0), new Size(size, linethicness));
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), j);
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), k);
                         break;
-                    case maze_pices.southeast:
+                    case maze_piece.southeast:
                         Rectangle l = new Rectangle(new Point(x + 0, y + size - linethicness), new Size(size, linethicness));
                         Rectangle m = new Rectangle(new Point(x + 0, y + 0), new Size(linethicness, size));
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), l);
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), m);
                         break;
-                    case maze_pices.southwest:
+                    case maze_piece.southwest:
                         Rectangle n = new Rectangle(new Point(x + 0, y + size - linethicness), new Size(size, linethicness));
                         Rectangle o = new Rectangle(new Point(x + size - linethicness, y + 0), new Size(linethicness, size));
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), n);
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), o);
                         break;
-                    case maze_pices.noenterable:
+                    case maze_piece.noenterable:
                         Rectangle p = new Rectangle(new Point(x + 0, y + 0), new Size(size, size));
                         e.Graphics.FillRectangle(new SolidBrush(Color.Black), p);
                         /*Rectangle q = new Rectangle(new Point(x + 0, y + 0), new Size(linethicness, size));
@@ -383,7 +383,7 @@ namespace mazetest
             }
         }
         /* moved to inside onpaint event
-        protected void setpice()
+        protected void setpiece()
         {
             bool uselarge = false;
             if (player_is_on)
@@ -402,19 +402,19 @@ namespace mazetest
             {
                 switch (type)
                 {
-                    case maze_pices.all:
+                    case maze_piece.all:
                         break;
-                    case maze_pices.east:
+                    case maze_piece.east:
                         Rectangle a = new Rectangle(new Point(0,0),new Size(10,3));
                         Rectangle b = new Rectangle(new Point(7,0), new Size(10, 2));
-                        mazepice.AddRectangle(a);
-                        mazepice.AddRectangle(b);
+                        mazepiece.AddRectangle(a);
+                        mazepiece.AddRectangle(b);
                         break;
-                    case maze_pices.eastwastnorth:
+                    case maze_piece.eastwastnorth:
                         break;
-                    case maze_pices.eastwestsouth:
+                    case maze_piece.eastwestsouth:
                         break;
-                    case maze_pices.north:
+                    case maze_piece.north:
                         break;
                 }
             }
@@ -423,23 +423,23 @@ namespace mazetest
                 this.Size = new Size(normalsize, normalsize);
                 switch (type)
                 {
-                    case maze_pices.all:
+                    case maze_piece.all:
                         break;
-                    case maze_pices.east:
+                    case maze_piece.east:
                         Rectangle a = new Rectangle(new Point(0,0),new Size(5,15));
                         Rectangle b = new Rectangle(new Point(5, 0), new Size(5, 15));
-                        mazepice.AddRectangle(a);
-                        mazepice.AddRectangle(b);
+                        mazepiece.AddRectangle(a);
+                        mazepiece.AddRectangle(b);
                         break;
-                    case maze_pices.eastwastnorth:
+                    case maze_piece.eastwastnorth:
                         break;
-                    case maze_pices.eastwestsouth:
+                    case maze_piece.eastwestsouth:
                         break;
-                    case maze_pices.north:
+                    case maze_piece.north:
                         break;
-                    case maze_pices.noenterable:
+                    case maze_piece.noenterable:
                         mazepice.AddRectangle(this.ClientRectangle);
-                        mazepice.FillMode = FillMode.Winding;
+                        mazepiece.FillMode = FillMode.Winding;
                         break;
                 }
             }
