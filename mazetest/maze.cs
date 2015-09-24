@@ -97,7 +97,7 @@ namespace mazetest
         {
             this.Visible = true;
             this.Enabled = true;
-            this.mazepice = new GraphicsPath();
+            this.mazepiece = new GraphicsPath();
             this.Size = new Size(normalsize, normalsize);
             this.BackColor = basecolour;
         }
@@ -108,7 +108,7 @@ namespace mazetest
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            if (mazepice != null)
+            if (mazepiece != null)
             {
                 e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                 bool uselarge = false;

@@ -104,7 +104,7 @@ namespace mazetest
                 {
                     for (int j = 0; j < mazesize; j++)
                     {
-                        map[i, j].type = (maze_piece) Enum.Parse(typeof(maze_piecr),b.ReadLine());
+                        map[i, j].type = (maze_piece) Enum.Parse(typeof(maze_piece),b.ReadLine());
                         map[i, j].player_is_on = bool.Parse(b.ReadLine());
                         map[i, j].end_point = bool.Parse(b.ReadLine());
                     }
@@ -204,7 +204,7 @@ namespace mazetest
                         map[selectedpiecex, selectedpiecey].type = maze_piece.north;
                         break;
                     case "set horizontal piece":
-                        map[selectedpiecex, selectedpicey].type = maze_piece.east;
+                        map[selectedpiecex, selectedpiecey].type = maze_piece.east;
                         break;
                     case "set blank piece":
                         map[selectedpiecex, selectedpiecey].type = maze_piece.all;
