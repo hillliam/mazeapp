@@ -1,4 +1,4 @@
-// Copyright © Liam hill 2013
+// Copyright Â© Liam hill 2013
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -6,7 +6,7 @@ using System.IO;
 
 namespace mazetest
 {
-    public enum maze_pices 
+    public enum maze_piece
         {
             north,
             east,
@@ -74,7 +74,7 @@ namespace mazetest
                 {
                     for (int j = 0; j < mazesize;j++)
                     {
-                        map[i, j].type = (maze_pices)Enum.Parse(typeof(maze_pices), b.ReadLine());
+                        map[i, j].type = (maze_piece)Enum.Parse(typeof(maze_piece), b.ReadLine());
                         map[i,j].player_is_on = bool.Parse(b.ReadLine());
                         map[i, j].end_point = bool.Parse(b.ReadLine());
                     }
@@ -131,18 +131,18 @@ namespace mazetest
                     {
                         switch (map[x, y].type)
                         { 
-                            case maze_pices.all:
-                            case maze_pices.north:
-                            case maze_pices.eastwastnorth:
-                            case maze_pices.southeast:
-                            case maze_pices.southwest:
+                            case maze_piece.all:
+                            case maze_piece.north:
+                            case maze_piece.eastwastnorth:
+                            case maze_piece.southeast:
+                            case maze_piece.southwest:
                                 switch(map[x, y - 1].type)
                                 {
-                                    case maze_pices.all:
-                                    case maze_pices.north:
-                                    case maze_pices.eastwestsouth:
-                                    case maze_pices.northeast:
-                                    case maze_pices.northwest:
+                                    case maze_piece.all:
+                                    case maze_piece.north:
+                                    case maze_piece.eastwestsouth:
+                                    case maze_piece.northeast:
+                                    case maze_piece.northwest:
                                         map[x, y].player_is_on = false;
                                         map[x, y - 1].player_is_on = true;
                                         moves++;
@@ -159,20 +159,20 @@ namespace mazetest
                     {
                         switch (map[x, y].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.east:
-                            case maze_pices.eastwestsouth:
-                            case maze_pices.eastwastnorth:
-                            case maze_pices.northwest:
-                            case maze_pices.southwest:
+                            case maze_piece.all:
+                            case maze_piece.east:
+                            case maze_piece.eastwestsouth:
+                            case maze_piece.eastwastnorth:
+                            case maze_piece.northwest:
+                            case maze_piece.southwest:
                                 switch (map[x - 1, y].type)
                                 {
-                                    case maze_pices.all:
-                                    case maze_pices.east:
-                                    case maze_pices.eastwastnorth:
-                                    case maze_pices.eastwestsouth:
-                                    case maze_pices.southeast:
-                                    case maze_pices.northeast:
+                                    case maze_piece.all:
+                                    case maze_piece.east:
+                                    case maze_piece.eastwastnorth:
+                                    case maze_piece.eastwestsouth:
+                                    case maze_piece.southeast:
+                                    case maze_piece.northeast:
                                         map[x, y].player_is_on = false;
                                         map[x - 1, y].player_is_on = true;
                                         moves++;
@@ -188,18 +188,18 @@ namespace mazetest
                     {
                         switch (map[x, y].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.north:
-                            case maze_pices.eastwestsouth:
-                            case maze_pices.northeast:
-                            case maze_pices.northwest:
+                            case maze_piece.all:
+                            case maze_piece.north:
+                            case maze_piece.eastwestsouth:
+                            case maze_piece.northeast:
+                            case maze_piece.northwest:
                                 switch (map[x, y + 1].type)
                                 {
-                                    case maze_pices.all:
-                                    case maze_pices.north:
-                                    case maze_pices.eastwastnorth:
-                                    case maze_pices.southeast:
-                                    case maze_pices.southwest:
+                                    case maze_piece.all:
+                                    case maze_piece.north:
+                                    case maze_piece.eastwastnorth:
+                                    case maze_piece.southeast:
+                                    case maze_piece.southwest:
                                         map[x, y].player_is_on = false;
                                         map[x, y + 1].player_is_on = true;
                                         moves++;
@@ -215,20 +215,20 @@ namespace mazetest
                     {
                         switch (map[x, y].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.east:
-                            case maze_pices.eastwestsouth:
-                            case maze_pices.eastwastnorth:
-                            case maze_pices.northeast:
-                            case maze_pices.southeast:
+                            case maze_piece.all:
+                            case maze_piece.east:
+                            case maze_piece.eastwestsouth:
+                            case maze_piece.eastwastnorth:
+                            case maze_piece.northeast:
+                            case maze_piece.southeast:
                                 switch (map[x + 1, y].type)
                                 {
-                                    case maze_pices.all:
-                                    case maze_pices.east:
-                                    case maze_pices.eastwastnorth:
-                                    case maze_pices.eastwestsouth:
-                                    case maze_pices.northwest:
-                                    case maze_pices.southwest:
+                                    case maze_piece.all:
+                                    case maze_piece.east:
+                                    case maze_piece.eastwastnorth:
+                                    case maze_piece.eastwestsouth:
+                                    case maze_piece.northwest:
+                                    case maze_piece.southwest:
                                         map[x, y].player_is_on = false;
                                         map[x + 1, y].player_is_on = true;
                                         moves++;
@@ -433,20 +433,20 @@ namespace mazetest
             }
             switch (map[startx, starty].type)
             {
-                case maze_pices.all:
-                case maze_pices.north:
-                case maze_pices.eastwastnorth:
-                case maze_pices.southeast:
-                case maze_pices.southwest:
+                case maze_piece.all:
+                case maze_piece.north:
+                case maze_piece.eastwastnorth:
+                case maze_piece.southeast:
+                case maze_piece.southwest:
                     if (tox == startx && toy == starty - 1)
                     {
                         switch (map[tox, toy].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.north:
-                            case maze_pices.eastwestsouth:
-                            case maze_pices.northeast:
-                            case maze_pices.northwest:
+                            case maze_piece.all:
+                            case maze_piece.north:
+                            case maze_piece.eastwestsouth:
+                            case maze_piece.northeast:
+                            case maze_piece.northwest:
                                 return true;
                         }
                     }
@@ -454,22 +454,22 @@ namespace mazetest
             }
             switch (map[startx, starty].type)
             {
-                case maze_pices.all:
-                case maze_pices.east:
-                case maze_pices.eastwestsouth:
-                case maze_pices.eastwastnorth:
-                case maze_pices.northwest:
-                case maze_pices.southwest:
+                case maze_piece.all:
+                case maze_piece.east:
+                case maze_piece.eastwestsouth:
+                case maze_piece.eastwastnorth:
+                case maze_piece.northwest:
+                case maze_piece.southwest:
                     if (tox == startx - 1 && toy == starty)
                     {
                         switch (map[tox, toy].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.east:
-                            case maze_pices.eastwastnorth:
-                            case maze_pices.eastwestsouth:
-                            case maze_pices.southeast:
-                            case maze_pices.northeast:
+                            case maze_piece.all:
+                            case maze_piece.east:
+                            case maze_piece.eastwastnorth:
+                            case maze_piece.eastwestsouth:
+                            case maze_piece.southeast:
+                            case maze_piece.northeast:
                                 return true;
                         }
                     }
@@ -477,20 +477,20 @@ namespace mazetest
             }
             switch (map[startx, starty].type)
             {
-                case maze_pices.all:
-                case maze_pices.north:
-                case maze_pices.eastwestsouth:
-                case maze_pices.northeast:
-                case maze_pices.northwest:
+                case maze_piece.all:
+                case maze_piece.north:
+                case maze_piece.eastwestsouth:
+                case maze_piece.northeast:
+                case maze_piece.northwest:
                     if (tox == startx && toy == starty + 1)
                     {
                         switch (map[tox, toy].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.north:
-                            case maze_pices.eastwastnorth:
-                            case maze_pices.southeast:
-                            case maze_pices.southwest:
+                            case maze_piece.all:
+                            case maze_piece.north:
+                            case maze_piece.eastwastnorth:
+                            case maze_piece.southeast:
+                            case maze_piece.southwest:
                                 return true;
                         }
                     }
@@ -498,22 +498,22 @@ namespace mazetest
             }
             switch (map[startx, starty].type)
             {
-                case maze_pices.all:
-                case maze_pices.east:
-                case maze_pices.eastwestsouth:
-                case maze_pices.eastwastnorth:
-                case maze_pices.northeast:
-                case maze_pices.southeast:
+                case maze_piece.all:
+                case maze_piece.east:
+                case maze_piece.eastwestsouth:
+                case maze_piece.eastwastnorth:
+                case maze_piece.northeast:
+                case maze_piece.southeast:
                     if (tox == startx + 1 && toy == starty)
                     {
                         switch (map[tox, toy].type)
                         {
-                            case maze_pices.all:
-                            case maze_pices.east:
-                            case maze_pices.eastwastnorth:
-                            case maze_pices.eastwestsouth:
-                            case maze_pices.northwest:
-                            case maze_pices.southwest:
+                            case maze_piece.all:
+                            case maze_piece.east:
+                            case maze_piece.eastwastnorth:
+                            case maze_piece.eastwestsouth:
+                            case maze_piece.northwest:
+                            case maze_piece.southwest:
                                 return true;
                         }
                     }
